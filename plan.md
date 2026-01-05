@@ -26,6 +26,15 @@
 7. **System** stores feedback in memory for agent to learn
 8. **Agent** learns from feedback in memory
 
+## Technology Stack
+- Agent model: Google Gemini
+- Backend: Python fastAPI
+- Database: Turso Libsql
+- Frontend: Notion
+- Host: Google Cloud Run
+- Scheduling: Google Cloud Scheduler
+- CI/CD: GitHub Actions
+
 ## Misc
 - notion_client: a python client to interact with notion database
 - notion webhook: to receive feedback from notion (need to host an endpoint to receive webhook)
@@ -35,3 +44,9 @@
 - backend component: python system, sqlite database -- consider containerize with docker
 - frontend component: notion database -- no need to host, use notion service
 - agent model: Google Gemini
+- db consideration: can use Turso for free small db hosting
+
+## Memo
+- deploy one image for two purpose (service + job)
+  - service: receive webhook from notion
+  - job: scheduled job to fetch news and send to notion

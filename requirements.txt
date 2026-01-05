@@ -1,0 +1,11 @@
+python-dotenv
+
+# Agent and language model libraries
+langchain
+langchain-core
+langchain-google-genai
+langgraph
+pydantic
+
+requests
+feedparser
